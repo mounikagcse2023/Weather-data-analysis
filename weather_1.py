@@ -4,7 +4,7 @@ import seaborn as sns
 
 df = pd.read_csv(r"C:\Users\nsg94\OneDrive\Desktop\Movies_dataset.csv")
 print(df)
-print("✅ Dataset loaded successfully!")
+print("Dataset loaded successfully!")
 print(f"Total Rows: {df.shape[0]}, Columns: {df.shape[1]}")
 print("\nColumns List:\n", list(df.columns))
 
@@ -12,7 +12,7 @@ print("\nColumns List:\n", list(df.columns))
 df['Date.Full'] = pd.to_datetime(df['Date.Full'], errors='coerce')
 
 # BASIC SUMMARY
-print("\n📊 BASIC DATA SUMMARY:")
+print("\nBASIC DATA SUMMARY:")
 print(df.describe())
 print("\nMissing Values:\n", df.isnull().sum())
 
@@ -120,6 +120,7 @@ hottest_state = df.groupby('Station.State')['Data.Temperature.Avg Temp'].mean().
 coldest_state = df.groupby('Station.State')['Data.Temperature.Avg Temp'].mean().idxmin()
 print(f"Hottest State: {hottest_state}")
 print(f"Coldest State: {coldest_state}")
+
 
 
 
